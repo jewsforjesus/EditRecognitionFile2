@@ -1,0 +1,1978 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/14/2022 5:20:01 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="JFJ-SF-V007"
+  DTS:CreatorName="JFJ\zmadmin"
+  DTS:DTSID="{F21C6746-B67E-4C6A-8DA8-7D669758B758}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3026.27"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{E6E9858E-8377-4BC0-9A19-0C2E0511F803}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Input]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{37D34722-9924-43CB-9D3D-6CDF101134A6}"
+      DTS:ObjectName="Flat File Input">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\GivingDNAExport\Recognition.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BUSINESSPROCESSOUTPUT_PKID"
+              DTS:DTSID="{BF238FB4-7CD1-496A-BB6C-7CA5AFDE4A6D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lookup ID"
+              DTS:DTSID="{6F1DAF20-308B-486C-A396-1CBC2ECC3E11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First Name"
+              DTS:DTSID="{E5C96E0D-2B11-46EA-A656-A0520E122058}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Name"
+              DTS:DTSID="{D8D7C5CF-E1C3-41A4-960B-CEC83B0D57B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Transaction ID"
+              DTS:DTSID="{F1DEF8AE-15A0-4177-8CD8-E7B776CAD1F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Revenue ID"
+              DTS:DTSID="{8E542187-2572-4E6A-B2B2-6B310DF00DF7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gift Date"
+              DTS:DTSID="{A46E63A3-C27D-449A-AE51-B248D00F2D6A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gift Amount"
+              DTS:DTSID="{340FF024-3489-46B3-A5BD-2F47EF523B57}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{9D496AEA-3E37-43CE-B973-61DE199C43CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Designation"
+              DTS:DTSID="{5F0651A3-9465-49B0-ABA5-DBFF14E792F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{CEC3B58A-1428-4264-82B9-C4DDF4A62811}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Recognition Credit"
+              DTS:DTSID="{F8EA4D0B-1620-405E-AB2F-CF2D55CFE6AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Base currency1"
+              DTS:DTSID="{EAB235AA-5AFC-4F27-8FB4-25EE74FD2BB7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Output]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{BA18BC66-2A1A-4901-BED9-6159B09B77E2}"
+      DTS:ObjectName="Flat File Output">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowsToSkip="1"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\GivingDNAExport\Recognition Edited.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BUSINESSPROCESSOUTPUT_PKID"
+              DTS:DTSID="{85A380E0-1EE4-4BF8-AC1D-C4B7394B01BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lookup ID"
+              DTS:DTSID="{D2BD32BE-C712-494E-83E1-EF1EB2A7562D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="First Name"
+              DTS:DTSID="{0E30E2F4-D1D0-44F6-9B25-4607666C954C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Name"
+              DTS:DTSID="{9E606308-25D8-434F-8A62-5CBE3C18A85C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Transaction ID"
+              DTS:DTSID="{519E7103-0858-4528-B7DF-B2593249113E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Revenue ID"
+              DTS:DTSID="{B2C128B6-7480-4937-91E1-844853F51FB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gift Date"
+              DTS:DTSID="{47F10AA7-4625-451B-87B4-5DBA0E67271A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gift Amount"
+              DTS:DTSID="{BDC08AB3-7630-4C20-A9EA-A4D2701DEC11}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Channel"
+              DTS:DTSID="{71538A00-A23D-4C8C-B86F-CA274F370B27}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Designation"
+              DTS:DTSID="{66C53FD2-7190-4EDB-B4F8-E0DAA42A56B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{4CE199B0-AF80-433E-A131-69241B9ECE82}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Recognition Credit"
+              DTS:DTSID="{EA5F48E9-4CDB-4E63-BF5F-7A7ED0CED1D9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Base currency1"
+              DTS:DTSID="{9D643C3B-0C6A-43AD-BAF6-AA481A850D8C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[JFJ-SF-V007.Zal]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{04CCEF42-1B55-49FD-8748-DB1104DBADAF}"
+      DTS:ObjectName="JFJ-SF-V007.Zal">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=JFJ-SF-V007;Initial Catalog=Zal;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task - Concatenate Columns"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{22915F81-75DA-40A1-9E7C-14C9A4736BA4}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task - Concatenate Columns"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{04CCEF42-1B55-49FD-8748-DB1104DBADAF}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="UPDATE [dbo].[Recognition]  &#xA;SET [Revenue ID] = REPLACE([Revenue ID],[Revenue ID], CONCAT([Revenue ID],' ', [Designation]));" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Input Flat File into DB table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1F493CB1-1B37-400F-9EB3-07176D35544D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Input Flat File into DB table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Input Flat File into DB table\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Input Flat File into DB table\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Input]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Input]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      name="BUSINESSPROCESSOUTPUT_PKID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Lookup ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lookup ID]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Lookup ID]"
+                      name="Lookup ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[First Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[First Name]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[First Name]"
+                      name="First Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Last Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Name]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Last Name]"
+                      name="Last Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Transaction ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Transaction ID]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Transaction ID]"
+                      name="Transaction ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Revenue ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Revenue ID]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Revenue ID]"
+                      name="Revenue ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Gift Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gift Date]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Gift Date]"
+                      name="Gift Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Gift Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gift Amount]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Gift Amount]"
+                      name="Gift Amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Channel]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Channel]"
+                      name="Channel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Designation]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Designation]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Designation]"
+                      name="Designation"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Recognition Credit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Recognition Credit]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Recognition Credit]"
+                      name="Recognition Credit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Base currency1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Base currency1]"
+                      length="50"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Base currency1]"
+                      name="Base currency1"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BUSINESSPROCESSOUTPUT_PKID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Lookup ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Lookup ID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[First Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First Name" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Last Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Name" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Transaction ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Transaction ID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Revenue ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Revenue ID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gift Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Date" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Gift Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Designation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Designation" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Recognition Credit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Recognition Credit" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Base currency1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Base currency1" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="65001"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Input Flat File into DB table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Recognition]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Input Flat File into DB table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[JFJ-SF-V007.Zal]"
+                  connectionManagerRefId="Package.ConnectionManagers[JFJ-SF-V007.Zal]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BUSINESSPROCESSOUTPUT_PKID"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[BUSINESSPROCESSOUTPUT_PKID]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Lookup ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Lookup ID"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Lookup ID]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Lookup ID]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[First Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First Name"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[First Name]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[First Name]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Last Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Name"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Name]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Last Name]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Transaction ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Transaction ID"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Transaction ID]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Transaction ID]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Revenue ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Revenue ID"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Revenue ID]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Revenue ID]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gift Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gift Date"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gift Date]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Gift Date]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gift Amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gift Amount"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gift Amount]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Gift Amount]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Channel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Channel"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Channel]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Designation]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Designation"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Designation]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Designation]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Recognition Credit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Recognition Credit"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Recognition Credit]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Recognition Credit]" />
+                    <inputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Base currency1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Base currency1"
+                      externalMetadataColumnId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Base currency1]"
+                      lineageId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output].Columns[Base currency1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BUSINESSPROCESSOUTPUT_PKID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Lookup ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Lookup ID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[First Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First Name" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Last Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Name" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Transaction ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Transaction ID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Revenue ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Revenue ID" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gift Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Date" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gift Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Designation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Designation" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Recognition Credit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Recognition Credit" />
+                    <externalMetadataColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Base currency1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Base currency1" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Input Flat File into DB table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Input Flat File into DB table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Input Flat File into DB table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Input Flat File into DB table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Input Flat File into DB table.Paths[Flat File Source Output]"
+              endId="Package\Input Flat File into DB table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Input Flat File into DB table\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Output Table to Flat File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{848CAD6F-FE03-4AF8-90CD-E878E9DCABD0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Output Table to Flat File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Output Table to Flat File\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Flat File Destination">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Output Table to Flat File\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Output]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Output]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BUSINESSPROCESSOUTPUT_PKID"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[BUSINESSPROCESSOUTPUT_PKID]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Lookup ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Lookup ID"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Lookup ID]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Lookup ID]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[First Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="First Name"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First Name]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[First Name]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Last Name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Last Name"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Last Name]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Name]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Transaction ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Transaction ID"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Transaction ID]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Transaction ID]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Revenue ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Revenue ID"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Revenue ID]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Revenue ID]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Gift Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gift Date"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gift Date]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gift Date]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Gift Amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Gift Amount"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gift Amount]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gift Amount]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Channel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Channel"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Channel]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Channel]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Designation]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Designation"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Designation]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Designation]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Recognition Credit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Recognition Credit"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Recognition Credit]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Recognition Credit]" />
+                    <inputColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].Columns[Base currency1]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Base currency1"
+                      externalMetadataColumnId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Base currency1]"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Base currency1]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BUSINESSPROCESSOUTPUT_PKID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Lookup ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Lookup ID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[First Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First Name" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Last Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Name" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Transaction ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Transaction ID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Revenue ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Revenue ID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gift Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Date" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Gift Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Designation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Designation" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Recognition Credit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Recognition Credit" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Base currency1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Base currency1" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Output Table to Flat File\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Recognition]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Output Table to Flat File\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[JFJ-SF-V007.Zal]"
+                  connectionManagerRefId="Package.ConnectionManagers[JFJ-SF-V007.Zal]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      name="BUSINESSPROCESSOUTPUT_PKID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Lookup ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Lookup ID]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Lookup ID]"
+                      name="Lookup ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[First Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First Name]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[First Name]"
+                      name="First Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Name]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Last Name]"
+                      name="Last Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Transaction ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Transaction ID]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Transaction ID]"
+                      name="Transaction ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Revenue ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Revenue ID]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Revenue ID]"
+                      name="Revenue ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gift Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gift Date]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gift Date]"
+                      name="Gift Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gift Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gift Amount]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gift Amount]"
+                      name="Gift Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Channel]"
+                      name="Channel"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Designation]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Designation]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Designation]"
+                      name="Designation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Recognition Credit]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Recognition Credit]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Recognition Credit]"
+                      name="Recognition Credit"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Base currency1]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Base currency1]"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].Columns[Base currency1]"
+                      name="Base currency1"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[BUSINESSPROCESSOUTPUT_PKID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BUSINESSPROCESSOUTPUT_PKID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Lookup ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Lookup ID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[First Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="First Name" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Last Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last Name" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Transaction ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Transaction ID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Revenue ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Revenue ID" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gift Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Date" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gift Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Gift Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Channel" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Designation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Designation" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Recognition Credit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Recognition Credit" />
+                    <externalMetadataColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Base currency1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Base currency1" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[BUSINESSPROCESSOUTPUT_PKID]"
+                      name="BUSINESSPROCESSOUTPUT_PKID" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Lookup ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Lookup ID]"
+                      name="Lookup ID" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[First Name]"
+                      name="First Name" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Last Name]"
+                      name="Last Name" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Transaction ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Transaction ID]"
+                      name="Transaction ID" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Revenue ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Revenue ID]"
+                      name="Revenue ID" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gift Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gift Date]"
+                      name="Gift Date" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gift Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gift Amount]"
+                      name="Gift Amount" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Channel]"
+                      name="Channel" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Designation]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Designation]"
+                      name="Designation" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Recognition Credit]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Recognition Credit]"
+                      name="Recognition Credit" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Base currency1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Base currency1]"
+                      name="Base currency1" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Output Table to Flat File.Paths[OLE DB Source Output]"
+              endId="Package\Output Table to Flat File\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Output Table to Flat File\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Truncate Table"
+      DTS:DTSID="{37D59889-57BB-4157-BB14-0F988F5526A2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{04CCEF42-1B55-49FD-8748-DB1104DBADAF}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="truncate table dbo.Recognition" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{18046B16-0FA7-4849-837F-6377DC384360}"
+      DTS:From="Package\Truncate Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Input Flat File into DB table" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{C37CC515-8136-4BB0-A800-A961FD9C947E}"
+      DTS:From="Package\Input Flat File into DB table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute SQL Task - Concatenate Columns" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{DB4C8849-8AF1-46AB-AE42-E3524D692494}"
+      DTS:From="Package\Execute SQL Task - Concatenate Columns"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Output Table to Flat File" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="276,42.6666666666667"
+          Id="Package\Input Flat File into DB table"
+          TopLeft="180.416654120717,140.555558200125" />
+        <NodeLayout
+          Size="276,42.6666666666667"
+          Id="Package\Truncate Table"
+          TopLeft="180.416654120717,44.4333341594206" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="318.416654120717,87.1000008260873">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.4555573740381"
+              Start="0,0"
+              End="0,45.9555573740381">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.9555573740381" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="276,42.6666666666667"
+          Id="Package\Execute SQL Task - Concatenate Columns"
+          TopLeft="180.416654120717,236.67778224083" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="318.416654120717,183.222224866792">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.4555573740381"
+              Start="0,0"
+              End="0,45.9555573740381">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.9555573740381" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="276,42.6666666666667"
+          Id="Package\Output Table to Flat File"
+          TopLeft="180.416654120717,332.800006281535" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="318.416654120717,279.344448907497">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.4555573740381"
+              Start="0,0"
+              End="0,45.9555573740381">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.9555573740381" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Input Flat File into DB table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Input Flat File into DB table\Flat File Source"
+          TopLeft="209.44443612187,100.027777280934" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Input Flat File into DB table\OLE DB Destination"
+          TopLeft="279.16665557358,226.77777665136" />
+        <EdgeLayout
+          Id="Package\Input Flat File into DB table.Paths[Flat File Source Output]"
+          TopLeft="307.777769455204,142.694443947601">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="77.3888861183768,84.0833327037593"
+              Start="0,0"
+              End="77.3888861183768,76.5833327037593">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.0416663518796" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,38.0416663518796"
+                    Point2="0,42.0416663518796"
+                    Point3="4,42.0416663518796" />
+                  <mssgle:LineSegment
+                    End="73.3888861183768,42.0416663518796" />
+                  <mssgle:CubicBezierSegment
+                    Point1="73.3888861183768,42.0416663518796"
+                    Point2="77.3888861183768,42.0416663518796"
+                    Point3="77.3888861183768,46.0416663518796" />
+                  <mssgle:LineSegment
+                    End="77.3888861183768,76.5833327037593" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Input Flat File into DB table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Output Table to Flat File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Output Table to Flat File\OLE DB Source"
+          TopLeft="446,120" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Output Table to Flat File\Flat File Destination"
+          TopLeft="470,230.666666666667" />
+        <EdgeLayout
+          Id="Package\Output Table to Flat File.Paths[OLE DB Source Output]"
+          TopLeft="521.333333333333,162.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.6666666666666,68"
+              Start="0,0"
+              End="34.6666666666666,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="4,34" />
+                  <mssgle:LineSegment
+                    End="30.6666666666666,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.6666666666666,34"
+                    Point2="34.6666666666666,34"
+                    Point3="34.6666666666666,38" />
+                  <mssgle:LineSegment
+                    End="34.6666666666666,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Output Table to Flat File\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
